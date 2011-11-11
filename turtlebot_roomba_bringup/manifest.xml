@@ -1,0 +1,21 @@
+<package>
+  <description brief="turtlebot_roomba_bringup">
+
+     turtlebot_roomba_bringup
+
+     This package provides launch files and configurations for launching a Roomba500-based turtlebot.
+     While the common turtlebot stack requires an iRobot Create to launch correctly, the launch files
+     in this package interface the robot using the roomba_500_series driver.
+
+  </description>
+  <author>Moritz Tenorth, tenorth@cs.tum.edu</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/turtlebot_roomba_bringup</url>
+  <depend package="roomba_500_series"/>
+  <depend package="turtlebot_bringup"/>
+
+
+</package>
+
+
