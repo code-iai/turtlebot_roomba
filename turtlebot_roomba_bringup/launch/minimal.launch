@@ -7,7 +7,7 @@
 
   <include file="$(find turtlebot_bringup)/params.launch" />
   <include file="$(find turtlebot_bringup)/app_manager.launch" />
-  <include file="$(find roomba_500_series)/launch/driver.launch" />
+  <include file="$(find turtlebot_roomba_bringup)/launch/driver.launch" />
 
   <!-- Turtlebot Laptop Battery Diagnostics -->
   <node pkg="turtlebot_node" type="laptop_battery.py" name="turtlebot_laptop_battery">
