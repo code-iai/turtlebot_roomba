@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- include basic turtlebot driver -->  
+  <include file="$(find turtlebot_roomba_bringup)/launch/minimal.launch" />
+
+  <!-- kinect -->
+  <include file="$(find turtlebot_roomba_bringup)/launch/kinect.launch" />
+
+  <!-- laser -->
+  <include file="$(find hokuyo_node)/hokuyo_test_intensity.launch" /> 
+
+</launch> 
