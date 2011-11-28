@@ -1,6 +1,7 @@
 <launch>
   <!-- Turtlebot Driver -->
   <node pkg="roomba_500_series" type="roomba560_node" name="turtlebot_node" output="screen">
-    <!--remap from="cmd_vel" to="turtlebot_node/cmd_vel"/-->
+    <param name="base_frame_id" value="base_footprint" />
+    <param name="has_gyro" value="false" />
   </node>
 </launch>
