@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- include ias turtlebot driver -->  
+  <include file="$(find turtlebot_roomba_bringup)/launch/ias-turtlebot.launch" />
+
+  <!-- kinect -->
+  <include file="$(find turtlebot_roomba_bringup)/launch/kinect.launch" />
+
+</launch> 
