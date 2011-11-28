@@ -1,4 +1,4 @@
-<package>
+zep<package>
   <description brief="turtlebot_roomba_bringup">
 
      turtlebot_roomba_bringup
@@ -14,8 +14,11 @@
   <url>http://ros.org/wiki/turtlebot_roomba_bringup</url>
   <depend package="roomba_500_series"/>
   <depend package="turtlebot_bringup"/>
-
-
+  <depend package="robot_state_publisher"/>
+  <depend package="turtlebot_description"/>
+  <depend package="hokuyo_node"/>
+  <depend package="joint_state_publisher"/>
+  <depend package="turtlebot_interactive_markers"/>
 </package>
 
 
