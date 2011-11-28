@@ -9,4 +9,9 @@
   <!-- laser -->
   <include file="$(find hokuyo_node)/hokuyo_test_intensity.launch" /> 
 
+  <!-- Joint state publisher -->
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+
+  <!-- Interactive markers teleop -->
+  <node pkg="turtlebot_interactive_markers" type="turtlebot_marker_server" name="turtlebot_marker_server"/>
 </launch> 
