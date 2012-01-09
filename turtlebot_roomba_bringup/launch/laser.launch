@@ -1,0 +1,8 @@
+<launch>
+  <node name="base_laser_node" type="hokuyo_node" pkg="hokuyo_node" >
+    <remap from="scan" to="base_scan"/>
+    <rosparam>
+      frame_id: base_laser
+    </rosparam>
+  </node>
+</launch>
