@@ -1,0 +1,17 @@
+<package>
+  <description brief="turtlebot_roomba_navigation">
+
+     turtlebot_roomba_navigation
+
+  </description>
+  <author></author>
+  <license>BSD</license>
+  <review status="unreviewed" notes="" />
+  <url>http://ros.org/wiki/turtlebot_roomba_navigation</url>
+  <depend package="slam_gmapping" />
+  <depend package="move_base" />
+  <depend package="parsec_perception" />
+
+</package>
+
+
