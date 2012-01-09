@@ -1,7 +1,10 @@
 <launch>
   <!-- Turtlebot Driver -->
   <node pkg="roomba_500_series" type="roomba560_node" name="turtlebot_node" output="screen">
-    <param name="base_frame_id" value="base_footprint" />
-    <param name="has_gyro" value="false" />
+    <rosparam>
+      base_frame_id: base_footprint
+      has_gyro: false
+      port: /dev/roomba
+    </rosparam>
   </node>
 </launch>
