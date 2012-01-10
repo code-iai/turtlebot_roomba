@@ -1,7 +1,4 @@
 - svn:
-      uri: http://isr-uc-ros-pkg.googlecode.com/svn/trunk/unstable/roomba_robot/roomba_500_series
-      local-name: packages/roomba_500_series
-- svn:
       uri: http://isr-uc-ros-pkg.googlecode.com/svn/trunk/unstable/lse_communication
       local-name: stacks/lse_communication
 
