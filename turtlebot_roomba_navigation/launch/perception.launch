@@ -9,8 +9,12 @@
     <remap from="~input" to="base_scan" />
   </node>
   <node pkg="nodelet" type="nodelet" name="base_outlier_removal_filter"
-        args="load pcl/RadiusOutlierRemoval turtlebot_perception_nodelet_manager">
+        args="load pcl/StatisticalOutlierRemoval turtlebot_perception_nodelet_manager">
     <remap from="~input" to="base_scan_converter/output" />
+    <rosparam>
+      mean_k: 4
+      stddev: 0.1
+    </rosparam>
   </node>
   <!-- Filter out points that are immediately surrounding the laser (e.g. the laser mount). -->
   <node pkg="nodelet" type="nodelet" name="base_scan_robot_self_filter"
@@ -18,7 +22,7 @@
     <remap from="~input" to="base_outlier_removal_filter/output" />
     <rosparam>
       base_frame: base_footprint
-      radius: 0.18
+      radius: 0.25
       minimal_z_value: 0.0
       maximal_z_value: 0.49
     </rosparam>

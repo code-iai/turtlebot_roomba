@@ -42,7 +42,7 @@ global_costmap:
    origin_y: -50.0
 
 DWAPlannerROS:
-  acc_lim_th: 0.75
+  acc_lim_th: 5.0
   acc_lim_x: 0.5
   acc_lim_y: 0.0
   max_trans_vel: 0.50
@@ -52,7 +52,7 @@ DWAPlannerROS:
   max_vel_y: 0.0
   min_vel_y: 0.0
   max_rot_vel: 1.5
-  min_rot_vel: 0.1
+  min_rot_vel: 0.5
   # These are guessed tolerance values. Yaw tolerance should be about
   # 45 degree and xy tolerance within a foot.
   yaw_goal_tolerance: 0.40  # radians
