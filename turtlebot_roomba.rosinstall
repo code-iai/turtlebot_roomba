@@ -1,4 +1,9 @@
+- hg:
+      uri: http://code.google.com/p/parsec/
+      local-name: stacks/parsec
 - svn:
       uri: http://isr-uc-ros-pkg.googlecode.com/svn/trunk/unstable/lse_communication
       local-name: stacks/lse_communication
-
+- svn:
+      uri: http://code.in.tum.de/svn/turtlebot-roomba
+      local-name: stacks/turtlebot_roomba
