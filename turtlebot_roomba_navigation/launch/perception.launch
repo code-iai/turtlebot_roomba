@@ -1,6 +1,4 @@
 <launch>
-  <include file="$(find turtlebot_roomba_bringup)/launch/laser.launch" />
-  
   <node pkg="nodelet" type="nodelet" name="turtlebot_perception_nodelet_manager" args="manager" output="screen" />
 
     <!-- tilt scan -->
@@ -32,5 +30,4 @@
     <remap from="points2_in" to="base_scan_robot_self_filter/output" />
     <remap from="points_out" to="base_cloud" />
   </node>
-
 </launch>
