@@ -30,7 +30,7 @@
 
       # The resolution of the map, i.e. the length of the edge of
       # one pixel in meters.
-      delta: 0.025
+      delta: 0.05
 
       llsamplerange: 0.01
       llsamplestep: 0.01

@@ -12,7 +12,7 @@
   <license>BSD</license>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/turtlebot_roomba_bringup</url>
-  <depend package="roomba_500_series"/>
+  <depend package="turtlebot_node"/>
   <depend package="turtlebot_bringup"/>
   <depend package="robot_state_publisher"/>
   <depend package="turtlebot_roomba_description"/>

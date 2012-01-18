@@ -1,10 +1,10 @@
 <launch>
-  <!-- Turtlebot Driver -->
-  <node pkg="roomba_500_series" type="roomba560_node" name="turtlebot_node" output="screen">
+  <node pkg="turtlebot_node" type="turtlebot_node.py" name="turtlebot_node" output="screen">
     <rosparam>
-      base_frame_id: base_footprint
-      has_gyro: false
       port: /dev/roomba
+      robot_type: roomba
+      publish_tf: true
+      has_gyro: false
     </rosparam>
   </node>
 </launch>
