@@ -76,6 +76,8 @@ from turtlebot_node.cfg import TurtleBotConfig
 
 class TurtlebotNode(object):
 
+    _SENSOR_READ_RETRY_COUNT = 5
+
     def __init__(self, default_port='/dev/ttyUSB0', default_update_rate=30.0):
         """
         @param default_port: default tty port to use for establishing
@@ -295,6 +297,13 @@ class TurtlebotNode(object):
         last_cmd_vel_time = rospy.get_rostime()
         last_js_time = rospy.Time(0)
 
+        # We set the retry count to 0 initially to make sure that only
+        # if we received at least one sensor package, we are robust
+        # agains a few sensor read failures. For some strange reason,
+        # sensor read failures can occur when switching to full mode
+        # on the Roomba.
+        sensor_read_retry_count = 0
+
         while not rospy.is_shutdown():
             last_time = s.header.stamp
             curr_time = rospy.get_rostime()
@@ -310,6 +319,14 @@ class TurtlebotNode(object):
                 # packet read can get interrupted, restart loop to
                 # check for exit conditions
                 continue
+            except DriverError:
+                if sensor_read_retry_count > 0:
+                    rospy.logwarn('Failed to read sensor package. %d retries left.' % sensor_read_retry_count)
+                    sensor_read_retry_count -= 1
+                    continue
+                else:
+                    raise
+            sensor_read_retry_count = self._SENSOR_READ_RETRY_COUNT
 
             # Reboot Create if we detect that charging is necessary.
             if s.charging_sources_available > 0 and \
