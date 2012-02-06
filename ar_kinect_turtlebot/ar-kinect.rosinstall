@@ -1,0 +1,10 @@
+- svn:
+    local-name: packages/ar_kinect
+    uri: http://albany-ros-pkg.googlecode.com/svn/trunk/albany_vision/ar_kinect
+
+- git:
+    local-name: stacks/ccny_vision
+    meta:
+      repo-name: ccny-ros-pkg
+    uri: http://robotics.ccny.cuny.edu/git/ccny-ros-pkg/ccny_vision.git
+
