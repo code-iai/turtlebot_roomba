@@ -3,6 +3,7 @@
     <remap from="scan" to="base_scan"/>
     <rosparam>
       frame_id: base_laser
+      skip: 3
     </rosparam>
   </node>
 </launch>

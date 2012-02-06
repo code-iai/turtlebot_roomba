@@ -1,0 +1,8 @@
+#the number of patterns to be recognized
+1
+
+#pattern 1
+TEST_PATTERN
+data/4x4/4x4_75.patt
+185.0
+0.0 0.0
